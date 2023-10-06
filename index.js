@@ -20,7 +20,7 @@ const SALT_ROUND = Number(process.env.SALT_ROUND) || 5;
 const app = express();
 
 //Middleware
-app.use(cors("http://localhost:3000/"));
+app.use(cors(process.env.FRONTEND_URL));
 app.use(express.json());
 app.use(express.static("public"));
 
